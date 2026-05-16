@@ -64,10 +64,6 @@ Options:
 	--ipv6
 		Make all connections using IPv6.
 
-	--info-only
-		Print stream information such as Video title, Selected quality
-		Stream start time and duration and then exits.
-
 	--add-metadata
 		Write some basic metadata information to the final file.
 
@@ -76,7 +72,7 @@ Options:
 		Google Video url with an itag parameter of 140.
 
 	--capture-duration DURATION or TIMESTRING
-		Captures a livestream for the specified length of time 
+		Captures a livestream for the specified length of time
 		and then exits and finalizes the video.
 		Supports time durations (e.g. 1d8h10m) or time strings (e.g. 12:30:05).
 
@@ -251,7 +247,7 @@ Options:
 	--start-delay DURATION or TIMESTRING
 		Waits for a specified length of time before starting to capture a stream from that time.
 		Supports time durations (e.g. 1d8h10m) or time strings (e.g. 12:30:05).
-		
+
 		Note: * NOT supported when using also using '--live-from'.
 		      * If the stream is scheduled and has not yet begun then
 		        the delay does not start counting until the stream has begun.
@@ -269,7 +265,7 @@ Options:
 		THREAD_COUNT * 2 + 3. Main thread, a thread for each audio and
 		video download, and THREAD_COUNT number of fragment downloaders
 		for both audio and video.
-		
+
 		Setting this to a large number has a chance at causing the download
 		to start failing with HTTP 401. Restarting the download with a smaller
 		thread count until you no longer get 401s should work. Default is 1.
@@ -317,7 +313,7 @@ Options:
 
 	--write-description
 		Write the video description to a separate .description file.
-	
+
 	--write-mux-file
 		Write the ffmpeg command that would mux audio and video or put audio
 		into an mp4 container instead of running the command automatically.
@@ -337,13 +333,13 @@ Options:
 	--live-from DURATION, TIMESTRING or NOW
 		Starts the download from the specified time in the future, the past or 'now'.
 		Use a negative time value to skip back in time from now.
-		Use a positive time value to specify the timestamp in the stream to start 
+		Use a positive time value to specify the timestamp in the stream to start
 		capturing from (from the start of the stream).
 
 		Supports time durations (e.g. 1d8h30m5s) or time strings (e.g. 32:30:05).
 		Examples: * '--live-from -01:10:00' will seek backwards 1 hour and 10 minutes from now
 					and then start downloading from that time.
-		          * '--live-from 1h10mm00s' will begin downloading from 1 hour 10 minutes 
+		          * '--live-from 1h10mm00s' will begin downloading from 1 hour 10 minutes
 				    after the stream started.
 		          * '--live-from now' will start recording from the current stream time.
 
